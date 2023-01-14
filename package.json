@@ -1,0 +1,38 @@
+{
+  "name": "turbo-logger",
+  "description": "A library for instrumenting your web apps to log messages to a server",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "graph": "turbo run build --graph",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rimraf node_modules",
+    "prepare": "husky install",
+    "format": "prettier --write \"**/README.md\" \"**/src/**/*.{js,jsx,ts,tsx,json}\""
+  },
+  "devDependencies": {
+    "@code-shaper/express": "^0.0.22",
+    "@code-shaper/react": "^0.0.24",
+    "@code-shaper/shaper-utils": "^0.0.22",
+    "@code-shaper/typescript": "^0.0.22",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3",
+    "rimraf": "^4.0.4",
+    "turbo": "^1.7.0"
+  },
+  "overrides": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": "prettier --write"
+  },
+ 
+  "packageManager": "pnpm@7.25.0"
+}
